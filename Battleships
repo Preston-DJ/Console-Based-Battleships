@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ConsoleBasedBattleships
 
@@ -188,7 +189,7 @@ namespace ConsoleBasedBattleships
                         }
                     }
 
-                    for (int i = 0; i < GetShipLength(shiptype) - 1; i++)
+                    for (int i = 0; i < GetShipLength(shiptype); i++)
                     {
                         if (orientation == "h")
                         {
@@ -273,7 +274,7 @@ namespace ConsoleBasedBattleships
             int shipsPlacedTotal = 0;
             int p1_shipsPlaced = 0;
             int p2_shipsPlaced = 0;
-            string[] ships = new string[] { "Carrier","Destroyer" };
+            string[] ships = new string[] { "Carrier", "Battleship", "Cruiser", "Submarine", "Destroyer" };
             string coordinates = "";
             string orientation = "";
 
